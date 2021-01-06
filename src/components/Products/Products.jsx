@@ -1,6 +1,6 @@
 import React from "react"
-import Grid from "@material-ui/core"
-import Product from "./product/Product" 
+import Grid from "@material-ui/core/Grid"
+import Product from "./Product/Product" 
 
 
 const products = [
@@ -20,6 +20,7 @@ const products = [
 ]
 
 const Products = () => {
+    return (
     <main>
         <Grid container justify="center" spacing={4}>
             {
@@ -36,7 +37,9 @@ const Products = () => {
         </Grid>
     </main>
 
+    )
+   
+
 }
 
 export default Products
-

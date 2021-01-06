@@ -11,7 +11,7 @@ import {
 import {addShoppingCard, AddShoppingCart} from "@material-ui/icons"
 // import classes from '*.module.css'
 
-import useStyles from "./styles"
+import useStyles from "../styles"
 
 function Product({product}) {
 
@@ -49,3 +49,4 @@ function Product({product}) {
 }
 
 export default Product
+
