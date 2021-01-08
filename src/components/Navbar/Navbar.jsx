@@ -69,9 +69,12 @@ import {ShoppingCart, Toll} from "@material-ui/icons"
 import logo from "../../assets/commerce.png"
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
+  appBar: {
+    boxShadow: 'none',
+    display: 'flex',
+    borderBottom: '1px solid rgba(0, 0, 0, 0.12)',
   },
+  
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -84,23 +87,25 @@ export default function Navbar() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
+    <>
+      <AppBar position="fixed" className={classes.appBar} color="inherit">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            {/* <MenuIcon /> */}
              <img src={logo} alt="" height="45px" className={classes.image} />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Migsz Shop
+            Migzs Shop
           </Typography>
+
           <Button color="inherit">
            <Badge badgeContent={2} color="secondary">
                 <ShoppingCart/>
            </Badge>
           </Button>
+
         </Toolbar>
+        
       </AppBar>
-    </div>
+    </>
   );
 }
