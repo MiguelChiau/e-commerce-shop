@@ -20,7 +20,7 @@ function Product({product}) {
 
     return (
         <Card className={classes.root}>
-            <CardMedia className={classes.media} img="" title ={product.name} />
+            <CardMedia className={classes.media} image={product.image} title ={product.name} />
             <CardContent>
                 <div className={classes.cardContent}>
                     <Typography variant="h5" gutterBottom>
@@ -34,7 +34,7 @@ function Product({product}) {
                     </Typography>
                 </div>
 
-                <Typography variant="h2" color="textSecondary">
+                <Typography variant="body2" color="textSecondary">
                     {product.description}
                 </Typography>
             </CardContent>
